@@ -2,19 +2,29 @@
 //  AppDelegate.swift
 //  NewsApp
 //
-//  Created by TalentBridge Mac - 1 on 31/01/21.
+//  Created by Mac - 1 on 31/01/21.
 //
 
 import UIKit
 import CoreData
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        let newsHeadlines = NewsHeadlinesTableViewController(nibName: "NewsHeadlinesTableViewControllerID", bundle: nil)
+        newsHeadlines.title = "News"
+        let navigationController = UINavigationController(rootViewController: newsHeadlines)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+        //
         return true
     }
 

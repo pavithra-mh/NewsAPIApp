@@ -2,7 +2,7 @@
 //  NewsAppTests.swift
 //  NewsAppTests
 //
-//  Created by TalentBridge Mac - 1 on 31/01/21.
+//  Created by Mac - 1 on 31/01/21.
 //
 
 import XCTest
